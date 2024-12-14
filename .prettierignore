@@ -1,0 +1,16 @@
+# Ignore build output
+dist
+build
+
+# Ignore configuration files
+.eslint.config.js
+.prettierrc
+
+# Ignore node_modules
+node_modules
+
+# Ignore lock files
+package-lock.json
+yarn.lock
+
+# Ignore other files or directories as needed
