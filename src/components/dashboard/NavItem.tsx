@@ -1,6 +1,6 @@
 // src/components/dashboard/NavItem.tsx
-import React from 'react';
-import { ChevronRight } from 'lucide-react'; // Import ChevronRight
+// React default import removed
+import { ChevronRight } from 'lucide-react';
 
 interface NavItemProps {
   label: string;
@@ -15,10 +15,10 @@ const NavItem: React.FC<NavItemProps> = ({
   iconPlaceholder,
   isActive = false,
   hasSubmenu = false,
-  isSubItem = false, // This prop is not used in the current simplified version but kept for potential future use
+  isSubItem = false,
 }) => {
-  const activeClasses = isActive ? 'bg-[#4B8FFB] text-white' : 'text-black hover:bg-gray-200'; 
-  const subItemClasses = isSubItem ? 'pl-8' : 'pl-2.5'; // Adjust base padding and sub-item indentation. pl-2.5 for base, pl-8 for sub-items.
+  const activeClasses = isActive ? 'bg-[#4B8FFB] text-white' : 'text-black hover:bg-gray-200';
+  // const subItemClasses = isSubItem ? 'pl-8' : 'pl-2.5'; // This variable was unused and has been removed.
 
   // Note: The prompt used p-2.5 for the NavItem. If icons are present, a left padding (pl) might be better controlled
   // if the icon has fixed width and margin. The current approach pads the whole item.
@@ -31,9 +31,9 @@ const NavItem: React.FC<NavItemProps> = ({
 
   return (
     <div
-      className={`flex items-center ${itemPadding} rounded-md cursor-pointer transition-colors duration-150 ${activeClasses}`}
-      role="link" 
-      tabIndex={0} 
+      className={`flex items-center ${itemPadding} rounded-md cursor-pointer transition-colors duration-150 ${activeClasses} focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-blue-500 focus:ring-offset-[#F5F6FA]`} // Added focus styles, offset color matches sidebar bg
+      role="link"
+      tabIndex={0}
     >
       {iconPlaceholder && <span className="mr-3 w-5 h-5 flex items-center justify-center">{iconPlaceholder}</span>}
       <span className="flex-1 text-sm font-medium">{label}</span>

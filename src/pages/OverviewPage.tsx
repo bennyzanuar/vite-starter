@@ -40,8 +40,8 @@ const OverviewPage: React.FC = () => {
             value="3.1M"
             indicator="+4.6%"
             iconPlaceholder={<Eye className={kpiIconSize} />}
-            iconBgColor="bg-purple-100"
-            iconColor="text-purple-500"
+            iconBgColor="bg-[#A66CFF]" // Specific purple from description
+            iconColor="text-white" // Ensure icon is visible on this background
           />
         </div>
       </section>

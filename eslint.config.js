@@ -11,13 +11,13 @@ import pluginJsxA11y from 'eslint-plugin-jsx-a11y'; // This is the plugin object
 export default [
   // Global ignores - add other config files
   { ignores: [
-      'dist/', 
-      'node_modules/', 
-      'eslint.config.js', 
-      'postcss.config.js', 
+      'dist/',
+      'node_modules/',
+      'eslint.config.js',
+      'postcss.config.js',
       'tailwind.config.js',
       // 'vite.config.ts', // Consider if this also needs to be ignored from type-aware app source linting
-    ] 
+    ]
   },
 
   // Base config for all JavaScript/TypeScript files (that are not ignored)
@@ -30,7 +30,7 @@ export default [
       },
     }
   },
-  
+
   // TypeScript specific configurations (parser setup)
   // This applies to files NOT ignored above.
   {
@@ -51,13 +51,13 @@ export default [
   // React specific configurations
   {
     files: ['**/*.{jsx,tsx}'],
-    ...react.configs.flat.recommended, 
-    languageOptions: { 
+    ...react.configs.flat.recommended,
+    languageOptions: {
       ...react.configs.flat.recommended.languageOptions,
       globals: { ...globals.browser },
     },
     plugins: {
-      'react': react, 
+      'react': react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
@@ -71,7 +71,7 @@ export default [
       react: { version: 'detect' },
     },
   },
-  
+
   // JSX A11y configurations
   {
     files: ['**/*.{jsx,tsx}'],
@@ -84,7 +84,7 @@ export default [
   },
 
   ...tailwind.configs['flat/recommended'], // Applies to files matched by its internal config
-  
+
   // Custom rule adjustments for TypeScript files (ensure this doesn't apply to JS or ignored files)
   {
     files: ['**/*.{ts,tsx,cts,mts}'], // Apply these rule adjustments only to non-ignored TS files

@@ -1,6 +1,6 @@
 // src/components/dashboard/Sidebar.tsx
-import React from 'react';
-import NavItem from './NavItem'; 
+// React default import removed
+import NavItem from './NavItem';
 import {
   Diamond, ShoppingCart, ClipboardList, Megaphone, BarChart2, Star, Folder,
   KanbanSquare, List, FileText, CheckSquare, AlertTriangle, Users, Box,
@@ -38,8 +38,8 @@ const Sidebar: React.FC = () => {
         <NavItem label="Details" iconPlaceholder={<FileText className={iconSize} />} hasSubmenu={true} />
         <NavItem label="Tasks" iconPlaceholder={<CheckSquare className={iconSize} />} hasSubmenu={true} />
         <NavItem label="Issue" iconPlaceholder={<AlertTriangle className={iconSize} />} hasSubmenu={true} />
-        
-        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-2 px-2.5"> 
+
+        <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-2 px-2.5">
           MORE
         </h3>
         <NavItem label="Customer" iconPlaceholder={<Users className={iconSize} />} />

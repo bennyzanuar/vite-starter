@@ -14,7 +14,7 @@ const ProductListItem: React.FC<ProductListItemProps> = ({
   changePercentage,
 }) => {
   const isPositive = changePercentage.startsWith('+');
-  const percentageColor = isPositive ? 'text-green-500' : 'text-red-500';
+  const percentageColor = isPositive ? 'text-green-600' : 'text-red-600'; // Improved contrast
 
   return (
     <div className="flex items-center py-3 border-b border-gray-100 last:border-b-0">

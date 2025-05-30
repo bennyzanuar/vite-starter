@@ -36,8 +36,23 @@ This template comes pre-configured with:
     *   A React `ErrorBoundary` component (`src/components/ErrorBoundary.tsx`) is implemented to catch and handle runtime errors gracefully, preventing UI crashes.
 *   **Basic Security:**
     *   Security-related HTTP headers (CSP, X-Content-Type-Options, etc.) added via `index.html` meta tags.
-*   **Mobile-First Example:** The main component in `src/App.tsx` demonstrates responsive Tailwind classes.
+*   **Mobile-First Example:** The initial example in `src/App.tsx` has been replaced by the E-commerce Dashboard itself, which is built with mobile-first principles.
 *   **Path Aliases:** `@/*` alias configured to `src/*` for cleaner import paths.
+*   **E-commerce Dashboard Example:**
+    *   A comprehensive dashboard interface is implemented as the primary example application.
+    *   **Layout:** Features a responsive `DashboardLayout` with a collapsible sidebar (mobile-friendly) and a main content area.
+    *   **Header:** Includes a dynamic title and placeholder controls (language, notifications, user profile) with a burger menu for mobile sidebar toggle.
+    *   **Sidebar:** Contains a logo, section titles, and a list of static navigation items with icons.
+    *   **Overview Page (`src/pages/OverviewPage.tsx`):** This is the main page displayed, showcasing various data visualization cards:
+        *   **KPI Cards:** Displaying "Total Profit", "Total Orders", and "Impressions" with indicators and icons.
+        *   **Sales Trend Chart:** A placeholder card for a line chart.
+        *   **Sales Target Card:** Displays target progress with a circular progress bar (SVG).
+        *   **Top Products List:** Shows a list of products with units sold and percentage change.
+        *   **Top Countries List:** Includes a world map placeholder and a list of countries with sales percentages shown via progress bars.
+        *   **Channel Revenue Card:** Displays revenue distribution by channel using horizontal progress bars.
+    *   **Iconography:** Utilizes `lucide-react` for clear and consistent icons throughout the dashboard.
+    *   **Accessibility:** Incorporates basic accessibility features like ARIA labels for icon-only buttons and focus management.
+    *   Built with React, TypeScript, and Tailwind CSS, demonstrating the template's capabilities.
 
 ## Getting Started
 

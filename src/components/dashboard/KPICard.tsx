@@ -19,7 +19,7 @@ const KPICard: React.FC<KPICardProps> = ({
   iconColor,
 }) => {
   const isPositive = indicator.startsWith('+');
-  const indicatorValueColor = isPositive ? 'text-green-500' : 'text-red-500';
+  const indicatorValueColor = isPositive ? 'text-green-600' : 'text-red-600'; // Darkened for better contrast
 
   return (
     <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl hover:bg-gray-50 transition-all duration-200 ease-in-out flex-1 min-w-[280px]"> {/* Added hover:bg-gray-50 and transition-all */}
@@ -28,13 +28,13 @@ const KPICard: React.FC<KPICardProps> = ({
         {/* Icon itself should be sized appropriately by the SVG or font size if text icon */}
         {iconPlaceholder}
       </div>
-      
+
       {/* Title */}
       <p className="text-sm text-gray-600 mb-1">{title}</p>
-      
+
       {/* Value */}
       <p className="text-3xl font-bold text-gray-900 mb-3">{value}</p>
-      
+
       {/* Indicator */}
       <div className="flex items-center text-xs">
         <span className={`flex items-center mr-1 ${indicatorValueColor}`}>

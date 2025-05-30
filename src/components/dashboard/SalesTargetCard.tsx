@@ -13,7 +13,7 @@ const SalesTargetCard: React.FC = () => {
       {/* Header: Title and Dropdown */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold text-gray-800">Sales Target</h2>
-        <button 
+        <button
           className="flex items-center text-xs text-gray-600 border border-gray-300 rounded-md px-2 py-1 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-500"
           title="Filter period"
         >
